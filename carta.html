@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti 💌</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      min-height: 60px;
+    }
+
+    button {
+      background: #ff6f91;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff4d6d;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>💖 Para ti, mi amor 💖</h1>
+    <p id="frase">Haz clic en el botón para leer tu primera sorpresa ✨</p>
+    <button onclick="mostrarFrase()">Ver siguiente</button>
+  </div>
+
+  <script>
+    const frases = [
+      "Eres la razón por la que sonrío cada día 🌸",
+      "Aunque estemos lejos, mi corazón siempre está contigo 💕",
+      "Cada día me haces más feliz ✨",
+      "Sueño con el momento en que podamos abrazarnos 🤗",
+      "Te amo más de lo que las palabras pueden explicar 💖"
+    ];
+
+    let indice = 0;
+
+    function mostrarFrase() {
+      if (indice < frases.length) {
+        document.getElementById("frase").textContent = frases[indice];
+        indice++;
+      } else {
+        document.getElementById("frase").textContent = "Fin de la carta... pero nunca del amor que siento por ti 💞";
+      }
+    }
+  </script>
+</body>
+</html>
